@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Students</string>
+    <string name="logoDescription">MissionBit Logo</string>
+    <string name="welcomeContent">Welcome to the MissionBit\'s Android Development Program</string>
+    <string name="greatingContent">Hello, {student}!</string>
+    <string name="nameLabel">What\'s your name?</string>
+    <string name="funFactLbl">Tell me something great about you to share with your mates.</string>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "214984119135",
+    "firebase_url": "https://mission-bit-students.firebaseio.com",
+    "project_id": "mission-bit-students",
+    "storage_bucket": "mission-bit-students.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214984119135:android:42dd0785510f6693",
+        "android_client_info": {
+          "package_name": "com.missionbit.students"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214984119135-bpiuh5le0atrpmta9qmk3oor5uu9sk3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE73QZeQS7lDu9AOO89pgA95AouIabxqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214984119135-bpiuh5le0atrpmta9qmk3oor5uu9sk3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
