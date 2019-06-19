@@ -48,17 +48,20 @@ public class MainActivity extends AppCompatActivity {
             ImageView iv = findViewById(R.id.studentImg);
             iv.setImageBitmap(bmp);
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            assert bmp != null;
             bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
             byte[] byteArray = stream.toByteArray();
 
-            StudentProvider sp = new StudentProvider();
-            String url = sp.UploadPhoto(byteArray);
-            System.out.println(url);
+//            StudentProvider sp = new StudentProvider();
+//            String url = sp.UploadPhoto(byteArray);
+//            System.out.println(url);
         }
     }
 
     public void onSaveClick(View view) {
-
+        Intent intent = new Intent(this, AboutMeActivity.class);
+        intent.putExtra("message", String.format("Hey!, so your fun fact is that... %s", student.getFunFact()));
+        startActivityForResult(intent, 1);
     }
 
     public void onPhotoClick(View view){
