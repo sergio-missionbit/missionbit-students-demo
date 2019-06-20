@@ -20,18 +20,19 @@ import java.io.ByteArrayOutputStream;
 public class MainActivity extends AppCompatActivity {
 
 
-    Student student = new Student();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        student.setName("Your name");
-        student.setFunFact("Your fun fact");
+        State.student = new Student();
+
+        State.student.setName("Please type your first name and last name");
+        State.student.setFunFact("Tell me something fun about you");
 
         final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setStudent(student);
+        binding.setStudent(State.student);
 
     }
 
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSaveClick(View view) {
         Intent intent = new Intent(this, AboutMeActivity.class);
-        intent.putExtra("message", String.format("Hey!, so your fun fact is that... %s", student.getFunFact()));
+        intent.putExtra("message", String.format("Hey!, so your fun fact is that... %s", State.student.getFunFact()));
         startActivityForResult(intent, 1);
     }
 
