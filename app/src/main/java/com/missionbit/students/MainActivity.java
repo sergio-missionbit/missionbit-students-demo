@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         State.student = new Student();
 
-        State.student.setName("Please type your first name and last name");
-        State.student.setFunFact("Tell me something fun about you");
+        State.student.setName("Name");
+        State.student.setFunFact("Fun fact");
 
         final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setStudent(State.student);
@@ -67,5 +67,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, 0);
     }
-
 }

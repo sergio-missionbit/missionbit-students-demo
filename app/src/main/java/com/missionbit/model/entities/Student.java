@@ -46,6 +46,7 @@ public class Student extends BaseObservable {
         notifyPropertyChanged(BR.photoUrl);
     }
 
+    @Bindable
     @RequiresApi(api = Build.VERSION_CODES.O)
     public int getAge() {
 
@@ -56,9 +57,16 @@ public class Student extends BaseObservable {
         return age;
     }
 
+    @Bindable
+    public Date getBirthdate (){
+        return birthdate;
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
+        notifyPropertyChanged(BR.birthdate);
+
     }
 }
 
