@@ -1,25 +1,22 @@
 package com.missionbit.students;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
-import com.missionbit.helpers.Firebase;
 import com.missionbit.model.entities.Student;
-import com.missionbit.model.providers.StudentProvider;
-import com.missionbit.model.providers.StudentsFirebaseConfig;
 import com.missionbit.students.databinding.ActivityMainBinding;
-
-import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 
+
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class MainActivity extends AppCompatActivity {
 
 

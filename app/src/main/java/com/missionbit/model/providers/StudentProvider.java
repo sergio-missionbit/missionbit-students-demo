@@ -1,7 +1,10 @@
 
 package com.missionbit.model.providers;
 
+import android.os.Build;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,6 +29,7 @@ public class StudentProvider {
         return studentId;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public ArrayList<Student> read(){
         ArrayList<Student> students = new ArrayList<Student>();
         ArrayList<Map<String, Object>> records = firebase.getRecords("students");
